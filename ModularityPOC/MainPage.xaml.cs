@@ -45,6 +45,7 @@ namespace ModularityPOC
 
         private void ReindexButton_Click(object sender, RoutedEventArgs e)
         {
+            Odps.Clear();
             string interfaceNamespace = "https://ontologydesignpatterns.org/interfaces#";
 
             var executingAssembly = Assembly.GetExecutingAssembly();
@@ -115,6 +116,21 @@ namespace ModularityPOC
 
             RequiredInterfaces.Clear();
             selectedOdp.RequiredInterfaces.ForEach(RequiredInterfaces.Add);
+        }
+
+        private void PatternChooser_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void PreviewButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ExportButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
