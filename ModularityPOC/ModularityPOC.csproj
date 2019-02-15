@@ -122,6 +122,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Odp.cs" />
+    <Compile Include="OdpInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +131,16 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="ModularityPOC_TemporaryKey.pfx" />
+    <EmbeddedResource Include="odps\interfaces.ttl" />
+    <EmbeddedResource Include="odps\patterns\MonthOfYearTemporalExtent.ttl" />
+    <EmbeddedResource Include="odps\patterns\MovableEvent.ttl" />
+    <EmbeddedResource Include="odps\patterns\Person.ttl" />
+    <EmbeddedResource Include="odps\patterns\Sensor.ttl" />
+    <EmbeddedResource Include="odps\patterns\SimplePersonRole.ttl" />
+    <EmbeddedResource Include="odps\patterns\StationaryEvent.ttl" />
+    <EmbeddedResource Include="odps\patterns\TimeBoundedAgentRole.ttl" />
+    <EmbeddedResource Include="odps\patterns\Wgs84Location.ttl" />
+    <EmbeddedResource Include="odps\patterns\XsdDtTemporalExtent.ttl" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
