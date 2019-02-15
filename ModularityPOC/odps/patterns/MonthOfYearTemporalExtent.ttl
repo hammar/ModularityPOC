@@ -1,0 +1,94 @@
+# baseURI: http://ontologydesignpatterns.org/patterns/MonthOfYearTemporalExtent
+
+@prefix : <http://ontologydesignpatterns.org/patterns/MonthOfYearTemporalExtent#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontologydesignpatterns.org/patterns/MonthOfYearTemporalExtent>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:April
+  a :Month ;
+.
+:August
+  a :Month ;
+.
+:December
+  a :Month ;
+.
+:February
+  a :Month ;
+.
+:January
+  a :Month ;
+.
+:July
+  a :Month ;
+.
+:June
+  a :Month ;
+.
+:March
+  a :Month ;
+.
+:May
+  a :Month ;
+.
+:Month
+  a owl:Class ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:oneOf (
+          :January
+          :February
+          :March
+          :April
+          :May
+          :June
+          :July
+          :August
+          :September
+          :October
+          :November
+          :December
+        ) ;
+    ] ;
+.
+:MonthOfYearTemporalExtent
+  a owl:Class ;
+  rdfs:subClassOf <https://ontologydesignpatterns.org/interfaces#TemporalExtent> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :extentMonth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :extentYear ;
+    ] ;
+.
+:November
+  a :Month ;
+.
+:October
+  a :Month ;
+.
+:September
+  a :Month ;
+.
+:extentMonth
+  a owl:FunctionalProperty ;
+  a owl:ObjectProperty ;
+  rdfs:domain :MonthOfYearTemporalExtent ;
+  rdfs:range :Month ;
+.
+:extentYear
+  a owl:DatatypeProperty ;
+  a owl:FunctionalProperty ;
+  rdfs:domain :MonthOfYearTemporalExtent ;
+  rdfs:range xsd:integer ;
+.

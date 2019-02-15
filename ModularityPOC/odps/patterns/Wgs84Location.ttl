@@ -1,0 +1,43 @@
+# baseURI: http://ontologydesignpatterns.org/patterns/Wgs84Location
+
+@prefix : <http://ontologydesignpatterns.org/patterns/Wgs84Location#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontologydesignpatterns.org/patterns/Wgs84Location>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:Wgs84Location
+  a owl:Class ;
+  rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+  rdfs:subClassOf <https://ontologydesignpatterns.org/interfaces#Location> ;
+.
+:altitude
+  a owl:DatatypeProperty ;
+  rdfs:domain :Wgs84Location ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :locationCoordinate ;
+  rdfs:subPropertyOf <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
+.
+:latitude
+  a owl:DatatypeProperty ;
+  rdfs:domain :Wgs84Location ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :locationCoordinate ;
+  rdfs:subPropertyOf <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+.
+:locationCoordinate
+  a owl:DatatypeProperty ;
+  rdfs:domain :Wgs84Location ;
+  rdfs:range xsd:decimal ;
+.
+:longitude
+  a owl:DatatypeProperty ;
+  rdfs:domain :Wgs84Location ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :locationCoordinate ;
+  rdfs:subPropertyOf <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+.

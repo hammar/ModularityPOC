@@ -1,0 +1,36 @@
+# baseURI: https://ontologydesignpatterns.org/interfaces
+
+@prefix : <https://ontologydesignpatterns.org/interfaces#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ontologydesignpatterns.org/interfaces>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:Agent
+  a owl:Class ;
+.
+:AgentRole
+  a owl:Class ;
+.
+:Component
+  a owl:Class ;
+.
+:Device
+  a owl:Class ;
+.
+:Event
+  a owl:Class ;
+.
+:Location
+  a owl:Class ;
+.
+:SpatioTemporalExtent
+  a owl:Class ;
+.
+:TemporalExtent
+  a owl:Class ;
+.

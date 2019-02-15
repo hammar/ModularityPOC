@@ -1,0 +1,31 @@
+# baseURI: http://ontologydesignpatterns.org/patterns/MovableEvent
+
+@prefix : <http://ontologydesignpatterns.org/patterns/MovableEvent#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontologydesignpatterns.org/patterns/MovableEvent>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:MovableEvent
+  a owl:Class ;
+  rdfs:subClassOf <https://ontologydesignpatterns.org/interfaces#Event> ;
+.
+:hasSpatioTemporalExtent
+  a owl:ObjectProperty ;
+  rdfs:domain :MovableEvent ;
+  rdfs:range <https://ontologydesignpatterns.org/interfaces#SpatioTemporalExtent> ;
+.
+:hasSubEvent
+  a owl:ObjectProperty ;
+  rdfs:domain :MovableEvent ;
+  rdfs:range <https://ontologydesignpatterns.org/interfaces#Event> ;
+.
+:providesParticipantRole
+  a owl:ObjectProperty ;
+  rdfs:domain :MovableEvent ;
+  rdfs:range <https://ontologydesignpatterns.org/interfaces#AgentRole> ;
+.

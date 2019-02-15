@@ -1,0 +1,18 @@
+# baseURI: http://ontologydesignpatterns.org/patterns/Sensor
+
+@prefix : <http://ontologydesignpatterns.org/patterns/Sensor#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontologydesignpatterns.org/patterns/Sensor>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:Sensor
+  a owl:Class ;
+  rdfs:subClassOf <https://ontologydesignpatterns.org/interfaces#Agent> ;
+  rdfs:subClassOf <https://ontologydesignpatterns.org/interfaces#Component> ;
+  rdfs:subClassOf <https://ontologydesignpatterns.org/interfaces#Device> ;
+.

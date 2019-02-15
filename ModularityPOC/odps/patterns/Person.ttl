@@ -1,0 +1,33 @@
+# baseURI: http://ontologydesignpatterns.org/patterns/Person
+
+@prefix : <http://ontologydesignpatterns.org/patterns/Person#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontologydesignpatterns.org/patterns/Person>
+  a owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:Person
+  a owl:Class ;
+  rdfs:subClassOf <https://ontologydesignpatterns.org/interfaces#Agent> ;
+.
+:familyName
+  a owl:DatatypeProperty ;
+  rdfs:domain :Person ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :name ;
+.
+:name
+  a owl:DatatypeProperty ;
+  rdfs:domain :Person ;
+  rdfs:range xsd:string ;
+.
+:personalName
+  a owl:DatatypeProperty ;
+  rdfs:domain :Person ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :name ;
+.
